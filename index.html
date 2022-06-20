@@ -15,20 +15,17 @@
       <h1>Todo App</h1>
       <div class="subcontainer">
         <input type="text" id="newTodo" name="newTodo" placeholder="New Todo" />
-        <a>
+        <a onclick="formValidation()">
           <img class="plus_icon" src="assets/images/plus icon.png" />
         </a>
       </div>
+      <div id="msg"></div>
     </div>
-    <div class="todo__grid">
+    <div class="todo__grid" id="toDoPosts">
       <div class="grid__style container" id="item__0">groceries</div>
       <div class="grid__style container" id="item__1">bury body</div>
       <div class="grid__style container" id="item__2">gym</div>
     </div>
-    <div class="todo__grid">
-      <div class="grid__style container" id="item__0">shopping</div>
-      <div class="grid__style container" id="item__1">birthday party</div>
-      <div class="grid__style container" id="item__2">work project</div>
-    </div>
   </body>
+  <script src="assets/js/index.js"></script>
 </html>
