@@ -41,3 +41,12 @@ let acceptData = () => {
 
   createPost();
 };
+
+let deletePost = (e) => {
+  e.parentElement.parentElement.remove();
+};
+
+let editPost = (e) => {
+  newTodo.value = e.parentElement.previousElementSibling.innerHTML;
+  e.parentElement.parentElement.remove();
+};
