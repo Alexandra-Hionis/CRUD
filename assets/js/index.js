@@ -2,6 +2,7 @@ let subcontainer = document.getElementById("subcontainer");
 let newTodo = document.getElementById("newTodo");
 let msg = document.getElementById("msg");
 let toDoPosts = document.getElementById("toDoPosts");
+let strikethrough = document.getElementById("strikethrough");
 
 // let formValidation = () => {
 //   if (newTodo.value === "") {
@@ -26,7 +27,7 @@ let formValidation = () => {
 
 let createPost = () => {
   toDoPosts.innerHTML += `
-    <div class="grid__style container"><p>${data.text}</p>
+    <div id="posts" class="grid__style container"><p>${data.text}</p>
     <span class="options">
         <i onClick="editPost(this)" class="fas fa-edit"></i>
         <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
@@ -50,3 +51,9 @@ let editPost = (e) => {
   newTodo.value = e.parentElement.previousElementSibling.innerHTML;
   e.parentElement.parentElement.remove();
 };
+
+// Store
+localStorage.setItem("key", "value");
+
+// Retrieve
+document.getElementById("posts").innerHTML = localStorage.getItem("lastname");
